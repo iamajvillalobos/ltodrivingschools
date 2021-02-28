@@ -7,13 +7,6 @@ GIT
       activesupport (>= 5.2.4)
       i18n
 
-GIT
-  remote: https://github.com/jumph4x/canonical-rails.git
-  revision: bfad93850127ab3049776d8ab78902150d5476cf
-  specs:
-    canonical-rails (0.2.11)
-      rails (>= 4.1, < 6.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -223,7 +216,6 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
-  canonical-rails!
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   pg (~> 1.1)
