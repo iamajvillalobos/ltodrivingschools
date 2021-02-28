@@ -7,4 +7,8 @@ module SchoolsHelper
 
     categories.join(", ")
   end
+
+  def province_options
+    School.pluck(:province).uniq.sort.map { |province| [province, province] }
+  end
 end

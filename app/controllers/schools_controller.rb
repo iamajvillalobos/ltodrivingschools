@@ -1,5 +1,6 @@
 class SchoolsController < ApplicationController
   def index
-    @schools = School.all
+    @q = School.ransack(params[:q])
+    @schools = @q.result.order(province: :asc)
   end
 end

@@ -1,8 +1,18 @@
 <div class="schools">
+  <%= search_form_for @q, class: "is-flex is-align-items-center mb-4" do |f| %>
+    <%= f.label :province, class: "mr-2" %>
+    <div class="select mr-2">
+      <%= f.select :province_cont, options_for_select(province_options, @q.province_cont), include_blank: "All" %>
+    </div>
+    <%= f.submit "Search", class: "button is-dark" %>
+  <% end %>
+
   <table class="table is-bordered is-hoverable">
     <thead>
       <tr>
-        <th>Province</th>
+        <th>
+          <%= sort_link(@q, :province, "Province", default_order: :asc) %>
+        </th>
         <th>Name</th>
         <th>Address</th>
         <th>Contact #</th>
