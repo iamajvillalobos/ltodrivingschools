@@ -1,4 +1,5 @@
 require "csv"
+require "open-uri"
 require "pry-byebug"
 
 namespace :parse_school do
@@ -6,7 +7,9 @@ namespace :parse_school do
   task run: :environment do
     School.delete_all
 
-    CSV.foreach(ENV["CSV_FILE"]).with_index do |row, index|
+    csv_file = open(ENV["CSV_FILE"])
+
+    CSV.foreach(csv_file).with_index do |row, index|
       next if index == 0 || index == 1
 
       params = {
