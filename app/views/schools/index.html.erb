@@ -1,26 +1,26 @@
 <div class="schools py-5">
-  <%= search_form_for @q, class: "is-flex is-align-items-center mb-4" do |f| %>
+  <%= search_form_for @q, class: "is-flex is-align-items-center is-justify-content-center mb-4" do |f| %>
     <%= f.label :province, class: "mr-2" %>
     <div class="select mr-4">
       <%= f.select :province_cont, options_for_select(province_options, @q.province_cont), include_blank: "All" %>
     </div>
 
-    <div class="mr-4">
-      <%= f.label "Motorcycle" %>
+    <div class="mr-4 is-flex is-align-items-center">
       <%= f.check_box :motorcycle_true, {}, 1, nil %>
+      <%= f.label "Motorcycle", class: "ml-1" %>
     </div>
 
-    <div class="mr-4">
-      <%= f.label "Light" %>
+    <div class="mr-4 is-flex is-align-items-center">
       <%= f.check_box :light_true, {}, 1, nil %>
+      <%= f.label "Light", class: "ml-1" %>
     </div>
 
-    <div class="mr-4">
-      <%= f.label "Heavy" %>
+    <div class="mr-4 is-flex is-align-items-center">
       <%= f.check_box :heavy_true, {}, 1, nil %>
+      <%= f.label "Heavy", class: "ml-1" %>
     </div>
 
-    <%= f.submit "Search", class: "button is-dark" %>
+    <%= f.submit "Search", class: "button is-dark search-button" %>
   <% end %>
 
   <table class="table is-bordered is-hoverable">
