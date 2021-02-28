@@ -1,22 +1,24 @@
-<table class="table is-bordered is-hoverable">
-  <thead>
-    <tr>
-      <th>Province</th>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Contact #</th>
-      <th>Categories</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @schools.each_with_index do |school, index| %>
+<div class="schools">
+  <table class="table is-bordered is-hoverable">
+    <thead>
       <tr>
-        <td><%= school.province %></td>
-        <td><%= school.name %></td>
-        <td><%= school.address %></td>
-        <td><%= school.contact_number %></td>
-        <td><%= category_list(school) %></td>
+        <th>Province</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact #</th>
+        <th>Categories</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @schools.each_with_index do |school, index| %>
+        <tr>
+          <td><%= school.province %></td>
+          <td><%= school.name %></td>
+          <td><%= school.address %></td>
+          <td><%= school.contact_number %></td>
+          <td><%= category_list(school) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
