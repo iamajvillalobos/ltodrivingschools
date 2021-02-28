@@ -56,3 +56,4 @@ gem "tailwindcss-rails", "~> 0.3.3"
 
 gem "pry-byebug", "~> 3.9"
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
