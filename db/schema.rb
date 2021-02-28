@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_28_071438) do
+ActiveRecord::Schema.define(version: 2021_02_28_084929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2021_02_28_071438) do
     t.text "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "motorcycle"
+    t.boolean "light"
+    t.boolean "heavy"
     t.index ["category"], name: "index_schools_on_category"
     t.index ["name"], name: "index_schools_on_name"
     t.index ["province"], name: "index_schools_on_province"
