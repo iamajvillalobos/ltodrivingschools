@@ -14,7 +14,9 @@ namespace :parse_school do
        name: row[1],
        address: row[2],
        contact_number: row[3],
-       category: row[4]
+       motorcycle: ParseCategory.(row[4], "motorcycle"),
+       light: ParseCategory.(row[4], "light"),
+       heavy: ParseCategory.(row[4], "heavy")
       }
 
       school = School.create!(params)
