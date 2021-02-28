@@ -1,7 +1,6 @@
 <table>
   <thead>
     <tr>
-      <th>Region</th>
       <th>Province</th>
       <th>Name</th>
       <th>Address</th>
@@ -10,13 +9,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>01</td>
-      <td>Ilocos Sur</td>
-      <td>AJB Driving School Inc</td>
-      <td>OAIG-DAYA CANDON ILOCOS SUR</td>
-      <td>09189473944</td>
-      <td>Motorcycle</td>
-    </tr>
+    <% @schools.each_with_index do |school, index| %>
+      <tr>
+        <td><%= school.province %></td>
+        <td><%= school.name %></td>
+        <td><%= school.address %></td>
+        <td><%= school.contact_number %></td>
+        <td><%= school.category %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
